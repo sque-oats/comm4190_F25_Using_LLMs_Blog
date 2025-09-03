@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SQ LLM Blog",
     "section": "",
-    "text": "Suya’s Test\n\n\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "First Test\n\n\n\nLearning\n\n\n\nFiguring out how to blog\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -23,9 +23,9 @@
   {
     "objectID": "posts/002_first_post/test_post.html",
     "href": "posts/002_first_post/test_post.html",
-    "title": "Suya’s Test",
+    "title": "First Test",
     "section": "",
-    "text": "I’m testing this out.\n\n\n\nYinYangCats.jpg"
+    "text": "I’m testing out uploading a post here. I also tested uploading an image. No AI was used in the creation of this post.\n\n\n\nYinYangCats.jpg"
   },
   {
     "objectID": "about.html",
