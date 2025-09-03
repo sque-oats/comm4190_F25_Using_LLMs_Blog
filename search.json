@@ -4,11 +4,18 @@
     "href": "index.html",
     "title": "SQ LLM Blog",
     "section": "",
-    "text": "Suya’s Test\n\n\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "Suya’s Test\n\n\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nSuya’s Test\n\n\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/002_test_post/test_post.html",
     "href": "posts/002_test_post/test_post.html",
+    "title": "Suya’s Test",
+    "section": "",
+    "text": "I’m testing this out."
+  },
+  {
+    "objectID": "posts/002_first_post/test_post.html",
+    "href": "posts/002_first_post/test_post.html",
     "title": "Suya’s Test",
     "section": "",
     "text": "I’m testing this out."
