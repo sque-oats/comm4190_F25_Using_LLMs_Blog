@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-09-12T01:38:42.118Z</lastmod>
+    <lastmod>2025-09-12T15:38:06.362Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_experiment/Recipes.html</loc>
-    <lastmod>2025-09-12T01:38:42.123Z</lastmod>
+    <lastmod>2025-09-12T15:38:06.369Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_post/test_post.html</loc>
-    <lastmod>2025-09-12T01:38:42.126Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/001_first_post/test_post.html</loc>
+    <lastmod>2025-09-12T15:38:06.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_college_usage/CollegeStudents.html</loc>
+    <lastmod>2025-09-12T15:38:06.370Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-09-12T01:38:42.119Z</lastmod>
+    <lastmod>2025-09-12T15:38:06.363Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-09-12T01:38:42.118Z</lastmod>
+    <lastmod>2025-09-12T15:38:06.362Z</lastmod>
   </url>
 </urlset>
