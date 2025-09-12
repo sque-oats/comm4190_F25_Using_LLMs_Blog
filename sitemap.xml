@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-09-12T00:45:22.599Z</lastmod>
+    <lastmod>2025-09-12T01:33:30.943Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-09-12T00:45:22.600Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_experiment/Recipes.html</loc>
+    <lastmod>2025-09-12T01:33:30.945Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_post/test_post.html</loc>
-    <lastmod>2025-09-12T00:45:22.602Z</lastmod>
+    <lastmod>2025-09-12T01:33:30.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-09-12T01:33:30.944Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-09-12T00:45:22.599Z</lastmod>
+    <lastmod>2025-09-12T01:33:30.943Z</lastmod>
   </url>
 </urlset>

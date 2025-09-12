@@ -4,7 +4,35 @@
     "href": "index.html",
     "title": "SQ LLM Blog",
     "section": "",
-    "text": "First Test\n\n\n\nGetting Started\n\n\n\nFiguring out how to blog\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "Can ChatGPT-5 cook?\n\n\n\nLLMs\n\nLearning\n\nFood\n\n\n\nAsking ChatGPT to find and/or generate simple recipes for college students.\n\n\n\n\n\nSep 10, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Test\n\n\n\nGetting Started\n\n\n\nFiguring out how to blog\n\n\n\n\n\nSep 3, 2025\n\n\nSuya\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/002_first_experiment/Recipes.html",
+    "href": "posts/002_first_experiment/Recipes.html",
+    "title": "Can ChatGPT-5 cook?",
+    "section": "",
+    "text": "Chef Cat"
+  },
+  {
+    "objectID": "posts/002_first_experiment/Recipes.html#background",
+    "href": "posts/002_first_experiment/Recipes.html#background",
+    "title": "Can ChatGPT-5 cook?",
+    "section": "Background",
+    "text": "Background\nAs someone who really loves good food, I unfortunately am a really lazy cooker. Exhausted after a long day, I have a small roster of really simple recipes that I follow. Some of my friends more passionate and skilled in cooking have started using ChatGPT to find high-quality recipes, so now I wonder: can GPT do this for really easy, low-level recipes as well?"
+  },
+  {
+    "objectID": "posts/002_first_experiment/Recipes.html#gpt-is-a-bit-reductive-or-perhaps-doesnt-care-much-for-food",
+    "href": "posts/002_first_experiment/Recipes.html#gpt-is-a-bit-reductive-or-perhaps-doesnt-care-much-for-food",
+    "title": "Can ChatGPT-5 cook?",
+    "section": "GPT is a bit reductive, or perhaps doesn’t care much for food",
+    "text": "GPT is a bit reductive, or perhaps doesn’t care much for food\nPrompt: I’m a tired, hard-working college student. Please develop or refer me to easy recipes for me to cook.\nResponse: Got it — you want easy, low-effort recipes that work for a tired college student. I’ll give you a mix of super quick meals, one-pan recipes, and no-fuss snacks. All of these can be made with cheap, common ingredients and minimal cooking gear.\n\n\n\nGPT first response\n\n\nFrom this simple prompt, GPT output a very, very expansive variety of options for me to choose from. But one very important thing was missing from the recipes that I requested: no steps. Even for really simple recipes such as egg fried rice, there is still is a certain amount of knowledge required that (I assume) most people with little cooking experience would know. For example, which ingredient goes into the pan first?\nI was a little surprised that GPT was missing these steps, since I’ve also used GPT for lab protocols or software help such as with (used often in research) ImageJ. And with minimal prompting, GPT would do a very in-depth breakdown of every single step to take.\nPrompt: Include steps please\nPerfect — let me turn those quick ideas into step-by-step recipes so you can follow them even when you’re tired. I’ll keep them short and no-nonsense.\n\n\n\nGPT second response\n\n\nWell I must admit that this egg fried rice recipe seems pretty similar to what I do at home, except it’s missing some essential aromatics (garlic and ginger) that barely lengthen the preparation. This recipe seems more akin to something that white Americans would cook (no offense), but this makes sense as I am using an English language LLM who would take recipes from those who write in English. And Americanized Chinese food recipes absolutely drown out the few Chinese cooks out there in the English recipe blogging community\nSide note: From the original prompt saying I was tired and hardworking, GPT clearly assumed that meant I was also in a rush and not in the mood for flowery prose (perhaps someone who doesn’t care the finer details in cooking). Which, is likely but not necessarily true for students like this, so it’s interesting to see how GPT thinks further ahead with these assumptions to cater towards the user.\nOverall, GPT seems decently sufficient at generating these recipe ideas and I can completely bypass the extremely long and annoying prose that always takes up more space than the actual recipe on most websites. However, GPT lacks specificity without prompting, but that’s something that can be easily remedied. Something I might try in the future is plugging in what random ingredients I actually have in the fridge and see if GPT is able to generate a working recipe from that. But I’ll save that for a future blog."
+  },
+  {
+    "objectID": "posts/002_first_post/test_post.html",
+    "href": "posts/002_first_post/test_post.html",
+    "title": "First Test",
+    "section": "",
+    "text": "YinYangCats.jpg\n\n\nI’m testing out uploading a post here. I also tested uploading an image. No AI was used in the creation of this post.\nHi! My name is Suya and I am a senior studying bionengineering. I’ve seen how much AI and its usage has evolved over the past few years, especially in education, and I’m excited to better understand the machinations behind this evolution. Fun fact: my favorite animal is the cat, hence the picture (credit: Pinterest)!"
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -19,13 +47,6 @@
     "title": "A test post",
     "section": "",
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/002_first_post/test_post.html",
-    "href": "posts/002_first_post/test_post.html",
-    "title": "First Test",
-    "section": "",
-    "text": "YinYangCats.jpg\n\n\nI’m testing out uploading a post here. I also tested uploading an image. No AI was used in the creation of this post.\n\nHi! My name is Suya and I am a senior studying bionengineering. I've seen how much AI and its usage has evolved over the past few years, especially in education, and I'm excited to better understand the machinations behind this evolution.\nFun fact: my favorite animal is the cat, hence the picture (credit: Pinterest)!"
   },
   {
     "objectID": "about.html",
