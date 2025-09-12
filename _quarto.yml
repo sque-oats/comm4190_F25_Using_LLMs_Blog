@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "My LLM Experiments"
+  title: "Experimenting with LLMs"
   navbar:
     right:
       - about.qmd
