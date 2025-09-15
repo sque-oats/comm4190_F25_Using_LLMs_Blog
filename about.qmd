@@ -5,4 +5,4 @@ about:
   template: morph
 ---
 
-BE Class of 2026
+BE 2026
