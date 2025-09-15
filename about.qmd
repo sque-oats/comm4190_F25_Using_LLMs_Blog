@@ -1,8 +1,8 @@
 ---
 title: About
-image: profile.jpg
+image: catprofile.jpg
 about:
-  template: morph
+  template: jolla
 ---
 
 BE 2026
