@@ -1,5 +1,5 @@
 ---
-title: Suya's LLM Blog 
+title: Suya's Blog on LLMs
 listing:
   contents: posts
   sort: date desc
