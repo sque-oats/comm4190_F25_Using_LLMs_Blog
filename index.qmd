@@ -1,5 +1,5 @@
 ---
-title: Suya's LLM B
+title: Suya's COMM4190 Blog
 listing:
   contents: posts
   sort: date desc
