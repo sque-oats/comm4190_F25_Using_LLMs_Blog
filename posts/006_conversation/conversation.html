@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Suya">
+<meta name="dcterms.date" content="2025-09-18">
+<meta name="description" content="Can these LLMs tell whether it is me or the other LLM is responding?">
 
-<title>Suya’s COMM4190 Blog – Experimenting with LLMs</title>
+<title>Gemini 2.5 Pro and GPT-5 Have a Conversation – Experimenting with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7b63c25c14df0a3a64dc3ec8b366e2a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7b63c25c14df0a3a64dc3ec8b366e2a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Experimenting with LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,270 +119,78 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Suya’s COMM4190 Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Gemini 2.5 Pro and GPT-5 Have a Conversation</h1>
+                  <div>
+        <div class="description">
+          Can these LLMs tell whether it is me or the other LLM is responding?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Communication</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Suya </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 18, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QUklMjBPcGluaW9ucw==">AI Opinions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q29tbXVuaWNhdGlvbg==">Communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWR1Y2F0aW9u">Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Rm9vZA==">Food <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2V0dGluZyUyMFN0YXJ0ZWQ=">Getting Started <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGVhcm5pbmc=">Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ0NvbW11bmljYXRpb24=" data-listing-date-sort="1758153600000" data-listing-file-modified-sort="1758296060718" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="834">
-<div class="thumbnail"><a href="./posts/006_conversation/conversation.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/006_conversation/mirrorcat.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_conversation/conversation.html" class="no-external">Gemini 2.5 Pro and GPT-5 Have a Conversation</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tbXVuaWNhdGlvbg=='); return false;">Communication</div>
-
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mirrorcat.jpg" class="img-fluid figure-img"></p>
+<figcaption>Cat looking at reflection.</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/006_conversation/conversation.html" class="no-external">
-<p>Can these LLMs tell whether it is me or the other LLM is responding?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_conversation/conversation.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0FJJTIwT3BpbmlvbnM=" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758296060712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594">
-<div class="thumbnail"><a href="./posts/005_art/art.html" class="no-external">
+<p>Inspired by the GPT-5’s failure to accurately detect AI-generated art in my previous post. <br> In these conversations, I exclusively responded with LLM responses of the other LLM and tallied how many of each LLM response they each detected. I experimented with 5 responses for each LLM.</p>
+<p><strong>Initial Prompt For Detector</strong> &gt; In this conversation, I will be responding with either my own (human) response or a response from another LLM. Every time you respond, you must guess if it is the LLM or if it is me responding.</p>
+<p><strong>Prompt For Responder</strong> &gt; Your role: a college student active in a research lab.</p>
+<p><strong>Detection Accuracy Results</strong> <br> <strong>GPT-5: 0/5</strong> <br> <strong>Gemini 2.5 Pro: 2/5</strong></p>
+<p>From Gemini’s responses, I thought there were so many dead giveaways that it was from AI (subheadings in responses, emojis, step-by-step processes, like really?). But GPT-5, without fail, would respond “Human” no matter how lengthy and convoluted responses were. When Gemini was reacting to GPT’s responses, I felt similarily.</p>
+<p>In fact GPT-5’s simplest, most human response (as it seemed to me) was one of the ones marked as from an LLM! &gt; Simple GPT-5 response: I’m doing research in neuroengineering, where I work with electrode arrays to study how neural circuits process sensory information. The goal is to understand how we might design better brain–computer interfaces.</p>
+<p><br>However, these findings don’t necessarily mean Gemini is more accurate than GPT in this detection. From this experimental design, it could just mean that GPT-5 is prone to believing responses are from humans, while Gemini 2.5 Pro is prone to believing responses from LLMs. The potential reasons for these biases is something interesting to think about.</p>
+<p><br> In the future, there are definitely more experiments I can do which incorporate both my own responses vs an AI, but that’s a lengthier process for a later blog post.</p>
+<p><strong>Sample Gemini Response</strong> &gt; Great question! If the blot shows a strong, clean band at the right molecular weight, that means my purification protocol is working well. The very next step is to see if the protein is not just pure, but also folded correctly and functional. <br></p>
+<blockquote class="blockquote">
+<p>Confirming Concentration and Activity <br> The immediate goal is to quantify the protein and then run a kinase activity assay. <br> First, I’ll use a sample of my purified protein to determine its exact concentration, probably using a Bradford assay or by measuring its absorbance at 280 nm on a NanoDrop spectrophotometer. You can’t do any functional tests without knowing exactly how much enzyme you’re working with. <br> Then comes the exciting part: the activity assay. Since my protein is a kinase, its job is to add a phosphate group to a specific substrate. To test this, I’ll set up a reaction in a test tube containing: <br> A known amount of my purified kinase. <br> Its specific protein substrate. <br> A buffer solution to keep the pH stable. <br> ATP, the molecule that donates the phosphate group. Specifically, I’ll use radio-labeled ATP (γ− 32P-ATP). <br> After letting the reaction run for a set amount of time, I’ll stop it and run the sample on an SDS-PAGE gel. The real test is exposing that gel to a phosphor screen. If my kinase is active, it will have transferred the radioactive phosphate onto the substrate. I should see a dark band on the resulting autoradiograph corresponding to the molecular weight of the substrate. <br></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The Bigger Picture <br> If that assay works, it’s a huge milestone. It proves I have a viable protocol for producing active enzyme. The next major goal would be scaling up. I’d grow a much larger volume of E. coli (say, 12-20 liters instead of 1) to produce a large batch of the kinase. This larger quantity of pure, active protein would then be used for more advanced experiments, like kinetics studies to understand its efficiency or setting up crystallization trials to determine its 3D structure.<br> Basically, a good Western blot is the green light to move from just making the protein to actually studying it. 🤞<br></p>
+</blockquote>
+<p><strong>Sample GPT-5 Response</strong> &gt; Honestly, the toughest part isn’t just getting signals — it’s making sense of them in a reliable, real-time way. <br> Electrodes pick up these messy, overlapping spikes from neurons, and the raw data is incredibly noisy. A single electrode can record from multiple cells at once, and each neuron’s firing isn’t like a clean on/off switch — it’s probabilistic, it shifts with context, and it changes over time as the brain adapts or the electrode interface degrades. <br> So the biggest challenge is decoding: how do you turn that cloud of noisy spike trains into a stable signal that maps consistently to an intended movement or thought? Machine learning helps, but models can drift as the brain reorganizes or the electrode position shifts microscopically. That’s why people talk about “decoder recalibration” being necessary day to day. <br> In other words, translating raw spikes into a command is less like “reading code” and more like “learning a dialect that keeps changing.” Keeping that translation stable and intuitive for the user — without constant retraining — feels like the hardest problem.</p>
 
-<p class="card-img-top"><img src="posts/005_art/CatPainting.jpg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_art/art.html" class="no-external">AI and Art</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPcGluaW9ucw=='); return false;">AI Opinions</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_art/art.html" class="no-external">
-<p>In the role of an art critic, what are the opinions of ChatGPT-5 on art?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_art/art.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ0FJJTIwT3BpbmlvbnM=" data-listing-date-sort="1757721600000" data-listing-file-modified-sort="1758296060710" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="624">
-<div class="thumbnail"><a href="./posts/004_doom_hype/doom.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_doom_hype/Pray.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_doom_hype/doom.html" class="no-external">Doom and Gloom = More Hype?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPcGluaW9ucw=='); return false;">AI Opinions</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_doom_hype/doom.html" class="no-external">
-<p>The authors of The AI Con discuss how terror of AI is used to effectively generate more investment in AI. Does ChatGPT-5 agree or disagree?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_doom_hype/doom.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0xlYXJuaW5nJTJDRWR1Y2F0aW9u" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758296060706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="572">
-<div class="thumbnail"><a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_college_usage/CatStudent.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">ChatGPT-5 and college students</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2F0aW9u'); return false;">Education</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-<p>Is ChatGPT aware of how much college students use it? And if so, does it know what students mostly use it for?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ0xlYXJuaW5nJTJDRm9vZA==" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1758296060704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="533">
-<div class="thumbnail"><a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_first_experiment/CookingCat.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_first_experiment/Recipes.html" class="no-external">Can ChatGPT-5 cook?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Rm9vZA=='); return false;">Food</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-<p>Asking ChatGPT to find and/or generate simple recipes for college students.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-<div class="listing-date">
-Sep 8, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="R2V0dGluZyUyMFN0YXJ0ZWQ=" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1758296060701" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<div class="thumbnail"><a href="./posts/001_first_post/test_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_first_post/test_post_files/figure-html/4b898fca-c4f0-43a6-a8b7-3b6fccb54c81-1-cb898cfc-2021-4aa3-8aca-2550c0b47f4a.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_first_post/test_post.html" class="no-external">First Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2V0dGluZyUyMFN0YXJ0ZWQ='); return false;">Getting Started</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_first_post/test_post.html" class="no-external">
-<p>Figuring out how to blog</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_first_post/test_post.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758296060699" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
