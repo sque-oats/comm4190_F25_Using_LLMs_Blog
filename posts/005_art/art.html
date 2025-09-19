@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Suya">
+<meta name="dcterms.date" content="2025-09-17">
+<meta name="description" content="In the role of an art critic, what are the opinions of ChatGPT-5 on art?">
 
-<title>Suya’s COMM4190 Blog – Experimenting with LLMs</title>
+<title>AI and Art – Experimenting with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7b63c25c14df0a3a64dc3ec8b366e2a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7b63c25c14df0a3a64dc3ec8b366e2a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Experimenting with LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,238 +119,71 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Suya’s COMM4190 Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">AI and Art</h1>
+                  <div>
+        <div class="description">
+          In the role of an art critic, what are the opinions of ChatGPT-5 on art?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">AI Opinions</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Suya </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 17, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="QUklMjBPcGluaW9ucw==">AI Opinions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RWR1Y2F0aW9u">Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Rm9vZA==">Food <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2V0dGluZyUyMFN0YXJ0ZWQ=">Getting Started <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGVhcm5pbmc=">Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ0FJJTIwT3BpbmlvbnM=" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758291599126" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
-<div class="thumbnail"><a href="./posts/005_art/art.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_art/CatPainting.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_art/art.html" class="no-external">AI and Art</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPcGluaW9ucw=='); return false;">AI Opinions</div>
-
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="CatPainting.jpg" class="img-fluid figure-img"></p>
+<figcaption>Cat in Museum</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/005_art/art.html" class="no-external">
-<p>In the role of an art critic, what are the opinions of ChatGPT-5 on art?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_art/art.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0FJJTIwT3BpbmlvbnM=" data-listing-date-sort="1757721600000" data-listing-file-modified-sort="1758291599125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="624">
-<div class="thumbnail"><a href="./posts/004_doom_hype/doom.html" class="no-external">
+<p><strong>Inspiration</strong></p>
+<p>I’m currently taking a class called “Art of the Web,” a design course centered around digital art. This goes beyond pixelated art, thinking of e-mails, websites, and ASCII code as art mediums. As art and its development has moved to computers and these techy platforms, I began to wonder, has there been a sort of “reverse” exchange? Can machines admire or “feel” from art such as humans do?</p>
+<p><strong>A Speculative Analysis</strong></p>
+<p><strong>Prompt</strong> &gt; You are in the role of a professional art critic. Please provide succinct and clear opinions on these art pieces. <img src="art1.jpg" class="img-fluid" alt="Art Piece #1"> <img src="art#2.jpg" class="img-fluid" alt="Art Piece #2"> <img src="art3.png" class="img-fluid" alt="Art Piece #3"></p>
+<p>In terms of human-made art pieces, I chose to only use art pieces I found on Pinterest, in the hopes that being able to recognize a famous art piece (e.g.&nbsp;Mona Lisa) wouldn’t impact GPT-5’s “opinion”. For the AI-generated art, that was from generated from GPT-5 with the <strong>prompt:</strong> generate me an artwork of a man surfboarding.</p>
+<p><strong>Response</strong> &gt; Here are my succinct critiques of the three works you shared: 1. Surreal Goldfish Dreamscape A strikingly surreal image blending dream and nature: the reclining face merges with grassy hills, while fish swim inside a fragile bubble of breath. Its charm lies in playful scale inversions (tiny cows below, monumental face above) and the sense of subconscious fluidity. The work feels whimsical yet contemplative, though its symbolism risks being overly literal if read only as “daydreaming.” The delicate watercolor-like textures soften the surrealism into something poetic. 2. Seascape with Boats (Van Gogh–style) This seascape captures both turbulence and lightness through restless brushwork and vivid color contrasts. The frothy foreground waves surge toward the viewer, while boats in the distance anchor the scene with calm human presence. The painting’s strength is in its kinetic rhythm — strokes that echo the sea’s perpetual motion. Yet, the composition leaves much negative space in the sky, making it slightly less balanced than Van Gogh’s strongest marine works. Still, the sea’s vitality is palpable. 3. Surfer in the Wave An energetic, heroic depiction of a surfer at the crest of a curling wave. The figure is sculptural, almost classical, with muscles modeled in bold light and shadow — reminiscent of Romanticism’s admiration for man versus nature. The ocean’s brushstrokes amplify dynamism, though the scene leans toward idealization: more illustration than intimate encounter with the sea. Its appeal lies in its immediacy and athletic power rather than subtle mood. 👉 Overall: The first piece is whimsical-surreal and poetic. The second is impressionistic, kinetic, and elemental. The third is dramatic, heroic, and illustrative.</p>
+<p>Interestingly, AI opinion’s on the AI-generated work was the most positive. Only in opinion #1 does GPT-5 explicitly the feelings that the artwork evokes in the viewer. Generally GPT-5’s opinions rely more on analysis of technicality and physicality rather than “vibes” and feelings. However, vague these vibes and feelings may be, I believe it to be something essential in our own human analysis of artwork, but perhaps at least this language will be incorporated into GPT-5 and other LLM’s capabilities in the near future.</p>
+<p>Side note: I asked GPT-5 which single artwork appeared generated out of the 3. GPT-5 answered that art piece #1 (human-made) does. This interests me in further experimentation on this subject.</p>
+<p>Side note: I generally dislike the concept of AI-generated art, since (at least to me) it will always lack a certain human warmth. However, I’ve noticed a huge jump in the technical quality of works compared to before where artworks generated by general prompts like mine would result in something round and shiny, which is something I find intriguing and also a bit more scared for the art industry.</p>
 
-<p class="card-img-top"><img src="posts/004_doom_hype/Pray.jpg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_doom_hype/doom.html" class="no-external">Doom and Gloom = More Hype?</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPcGluaW9ucw=='); return false;">AI Opinions</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_doom_hype/doom.html" class="no-external">
-<p>The authors of The AI Con discuss how terror of AI is used to effectively generate more investment in AI. Does ChatGPT-5 agree or disagree?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_doom_hype/doom.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ0xlYXJuaW5nJTJDRWR1Y2F0aW9u" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758291599120" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="572">
-<div class="thumbnail"><a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_college_usage/CatStudent.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">ChatGPT-5 and college students</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2F0aW9u'); return false;">Education</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-<p>Is ChatGPT aware of how much college students use it? And if so, does it know what students mostly use it for?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_college_usage/CollegeStudents.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0xlYXJuaW5nJTJDRm9vZA==" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1758291599119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="533">
-<div class="thumbnail"><a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_first_experiment/CookingCat.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_first_experiment/Recipes.html" class="no-external">Can ChatGPT-5 cook?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmc='); return false;">Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Rm9vZA=='); return false;">Food</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-<p>Asking ChatGPT to find and/or generate simple recipes for college students.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_first_experiment/Recipes.html" class="no-external">
-<div class="listing-date">
-Sep 8, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R2V0dGluZyUyMFN0YXJ0ZWQ=" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1758291599115" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<div class="thumbnail"><a href="./posts/001_first_post/test_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_first_post/test_post_files/figure-html/4b898fca-c4f0-43a6-a8b7-3b6fccb54c81-1-cb898cfc-2021-4aa3-8aca-2550c0b47f4a.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_first_post/test_post.html" class="no-external">First Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2V0dGluZyUyMFN0YXJ0ZWQ='); return false;">Getting Started</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_first_post/test_post.html" class="no-external">
-<p>Figuring out how to blog</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_first_post/test_post.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Suya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758291599113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
