@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Suya">
-<meta name="dcterms.date" content="2025-09-03">
-<meta name="description" content="Figuring out how to blog">
+<meta name="dcterms.date" content="2025-09-23">
+<meta name="description" content="Part 1 of Medicine Series. Comparing Gemini 2.5 Pro and ChatGPT-5 in their medical explanations.">
 
-<title>First Test – Experimenting with LLMs</title>
+<title>Dr.&nbsp;LLM, tell me what’s wrong with me. – Experimenting with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,14 +115,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">First Test</h1>
+      <h1 class="title">Dr.&nbsp;LLM, tell me what’s wrong with me.</h1>
                   <div>
         <div class="description">
-          Figuring out how to blog
+          Part 1 of Medicine Series. Comparing Gemini 2.5 Pro and ChatGPT-5 in their medical explanations.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Getting Started</div>
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Communication</div>
               </div>
                   </div>
   </div>
@@ -140,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 3, 2025</p>
+        <p class="date">September 23, 2025</p>
       </div>
     </div>
     
@@ -161,14 +162,42 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="test_post_files/figure-html/4b898fca-c4f0-43a6-a8b7-3b6fccb54c81-1-cb898cfc-2021-4aa3-8aca-2550c0b47f4a.jpg" class="img-fluid figure-img"></p>
-<figcaption>YinYangCats.jpg</figcaption>
+<p><img src="medicalcat.jpg" class="img-fluid figure-img"></p>
+<figcaption>Doctor Cat!</figcaption>
 </figure>
 </div>
-<p>I’m testing out uploading a post here. I also tested uploading an image. No AI was used in the creation of this post.</p>
-<p>Hi! My name is Suya and I am a senior studying bionengineering. I’ve seen how much AI and its usage has evolved over the past few years, especially in education, and I’m excited to better understand the machinations behind this evolution. Fun fact: my favorite animal is the cat, hence the picture (credit: Pinterest)!</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>In the internet age, people rarely go to the doctor without searching up their symptoms first.</p>
+<p><em>What does this rash on my leg mean? Feeling dizzy only at night, what does this mean?</em></p>
+<p>It certainly helps that there is a huge amount of accurate information actually available online, although people still usually need to go to doctors for their expert opinion and true confirmation of their diagnosis.</p>
+<p>But now with AI’s intelligence, how will people start getting their medical information? In this preliminary phase before actually going to clinic, what are the possibilities? And if it starts getting really, really helpful, which LLM is the best?</p>
+</section>
+<section id="experiment-explain-these-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-explain-these-conditions">Experiment: Explain These Conditions</h2>
+<p>I first wanted to test how thoroughly LLMs would explain common medical conditions, when prompted.</p>
+<p><strong>Prompt:</strong> &gt; How can I tell if I have a cold, or if it instead the flu? Give me their similarities and differences in succinct, bullet point form, highlighting only the most significant differences.</p>
+<p><strong>ChatGPT-5’s Response</strong> &gt; Similarities: <br> Both are viral, contagious, and cause cough, sore throat, fatigue. <br> <strong>Key Differences:</strong> <br> Onset: Cold = gradual |Flu = sudden. <br> Fever: Cold = rare/mild | Flu = common, high. <br> Aches: Cold = mild | Flu = severe. <br> Fatigue: Cold = mild | Flu = marked, prolonged. <br> Congestion/runny nose: Cold = prominent | Flu = less common. <br> <br> 👉 If symptoms hit you hard and fast, with high fever and body aches → flu. <br> If it’s mostly congestion and mild discomfort over days → cold. <br> <br> Would you like me to add a super-short symptom checklist you can tick off when you feel sick?</p>
+<p><strong>Gemini 2.5 Pro’s Response</strong> &gt; It can be tricky to distinguish between a cold and the flu, as they are both respiratory illnesses with similar symptoms. However, the flu is generally more severe and its onset is more abrupt. Below are their similarities and the most significant differences to help you tell them apart. <br> <strong>Similarities</strong> <br> Cough: Both illnesses can produce a cough. <br> Sore Throat: This can be a symptom of both a cold and the flu. <br> Runny or Stuffy Nose: Nasal congestion is common to both. <br> <img src="GeminiTable.png" class="img-fluid" alt="Gemini Differences Table."></p>
+<p>Both LLMs produced answers of similar depth and length. However, only Gemini 2.5 Pro provided links to sources for their statements, both in-line and at the end of the generated answer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LinewSource.png" class="img-fluid figure-img"></p>
+<figcaption>Line with Source</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Sources.png" class="img-fluid figure-img"></p>
+<figcaption>Sources at the end of the answer.</figcaption>
+</figure>
+</div>
+<p>As well, despite my prompt on bullet points, Gemini opted to format the differences between having a cold and the flu through a table. GPT, on the other hand, displayed everything in bullet points. Frankly, I find that the table is actually easier to interpret than the bullet points, and may be comfortable for use by the average viewer.</p>
+<p>My overall takeaway here is that <strong>Gemini did it better</strong>. Despite both generated answers having similar content, Gemini was superior in building trust in the user (providing sources) and in formatting (table instead of bullet points, despite my prompt). Will Gemini remain on top in my future medical experiments? Stay tuned for Part 2 (diagnosis) and Part 3 (clinical roleplay) of my Medicine Series.</p>
+<p>Side note: Do these findings with the bullet point prompt mean that GPT-5 is more obedient to the user than Gemini? Is this a positive, negative, or neither? Does this mean Gemini is more free-thinking, simply less trained, or something else entirely?</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
