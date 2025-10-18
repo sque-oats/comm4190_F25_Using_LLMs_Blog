@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-10-13T19:10:25.184Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-10-18T00:45:33.429Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/008_medical_diagnosis/medical_diagnosis.html</loc>
-    <lastmod>2025-10-13T19:10:25.216Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/013_aicon1/aicon1.html</loc>
+    <lastmod>2025-10-18T00:45:33.454Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_categorization/categorization.html</loc>
-    <lastmod>2025-10-13T19:10:25.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_conversation/conversation.html</loc>
-    <lastmod>2025-10-13T19:10:25.213Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/009_medical_clinic/medical_clinic.html</loc>
-    <lastmod>2025-10-13T19:10:25.217Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_college_usage/CollegeStudents.html</loc>
-    <lastmod>2025-10-13T19:10:25.196Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/001_first_post/test_post.html</loc>
-    <lastmod>2025-10-13T19:10:25.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-10-13T19:10:25.184Z</lastmod>
+    <lastmod>2025-10-18T00:45:33.454Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-10-13T19:10:25.186Z</lastmod>
+    <lastmod>2025-10-18T00:45:33.430Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/005_art/art.html</loc>
-    <lastmod>2025-10-13T19:10:25.204Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/008_medical_diagnosis/medical_diagnosis.html</loc>
+    <lastmod>2025-10-18T00:45:33.450Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/010_fandom_quiz/fandom_quiz.html</loc>
-    <lastmod>2025-10-13T19:10:25.218Z</lastmod>
+    <lastmod>2025-10-18T00:45:33.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/009_medical_clinic/medical_clinic.html</loc>
+    <lastmod>2025-10-18T00:45:33.453Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/012_manipulation/manipulation.html</loc>
-    <lastmod>2025-10-13T19:10:25.219Z</lastmod>
+    <lastmod>2025-10-18T00:45:33.454Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_experiment/Recipes.html</loc>
-    <lastmod>2025-10-13T19:10:25.193Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2025-10-18T00:45:33.429Z</lastmod>
   </url>
   <url>
-    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/004_doom_hype/doom.html</loc>
-    <lastmod>2025-10-13T19:10:25.202Z</lastmod>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/001_first_post/test_post.html</loc>
+    <lastmod>2025-10-18T00:45:33.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/005_art/art.html</loc>
+    <lastmod>2025-10-18T00:45:33.442Z</lastmod>
   </url>
   <url>
     <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/007_medical_depth/medical_depth.html</loc>
-    <lastmod>2025-10-13T19:10:25.215Z</lastmod>
+    <lastmod>2025-10-18T00:45:33.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_college_usage/CollegeStudents.html</loc>
+    <lastmod>2025-10-18T00:45:33.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_first_experiment/Recipes.html</loc>
+    <lastmod>2025-10-18T00:45:33.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_conversation/conversation.html</loc>
+    <lastmod>2025-10-18T00:45:33.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sque-oats.github.io/comm4190_F25_Using_LLMs_Blog/posts/004_doom_hype/doom.html</loc>
+    <lastmod>2025-10-18T00:45:33.442Z</lastmod>
   </url>
 </urlset>
